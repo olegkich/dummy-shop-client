@@ -19,7 +19,7 @@ const NavBar = (props: Props) => {
                             <Button text="Admin Panel" />
                         </Link>
                     ) : (
-                        <Link to="/registration">
+                        <Link to="/signup">
                             <Button text="Authorize" />
                         </Link>
                     )}

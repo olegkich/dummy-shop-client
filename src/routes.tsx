@@ -1,13 +1,15 @@
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import {
     ADMIN_ROUTE,
     BASKET_ROUTE,
     SHOP_ROUTE,
     LOGIN_ROUTE,
-    REGISTRATION_ROUTE,
     DEVICE_ROUTE,
+    SIGNUP_ROUTE,
 } from "./const";
 import Admin from "./pages/Admin";
-import Auth from "./pages/Auth";
+
 import Basket from "./pages/Basket";
 import Device from "./pages/Device";
 import Shop from "./pages/Shop";
@@ -30,11 +32,11 @@ export const publicRoutes = [
     },
     {
         path: LOGIN_ROUTE,
-        Component: <Auth />,
+        Component: <Login />,
     },
     {
-        path: REGISTRATION_ROUTE,
-        Component: <Auth />,
+        path: SIGNUP_ROUTE,
+        Component: <Signup />,
     },
     {
         path: DEVICE_ROUTE + "/:id",

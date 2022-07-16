@@ -1,10 +1,13 @@
 import { Button } from "@mui/material";
 import axios, { Axios } from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { signup } from "../api/User";
-import "./Signup.css";
-import { useNavigate } from "react-router-dom";
+import "./Form.css";
+import { Link, useNavigate } from "react-router-dom";
+import { LOGIN_ROUTE } from "../const";
+import { observer } from "mobx-react";
+import { StoreContext } from "../store/StoreProvider";
 
 type Props = {};
 
@@ -14,7 +17,8 @@ type FormValues = {
     repeatPassword: string;
 };
 
-const Signup = (props: Props) => {
+const Signup = observer((props: Props) => {
+    const UserStore = useContext(StoreContext).UserStore;
     const navigate = useNavigate();
     const {
         register,
@@ -32,6 +36,8 @@ const Signup = (props: Props) => {
             return;
         }
 
+        UserStore.setUser(request);
+        UserStore.setIsAuth(true);
         navigate("/");
     };
 
@@ -91,8 +97,23 @@ const Signup = (props: Props) => {
                 <input type="submit" />
                 <span className="error">{requestError}</span>
             </div>
+            <div className="form__field-container">
+                <span>
+                    Have an account?
+                    <Link
+                        style={{
+                            color: "blue",
+                            textDecoration: "underline",
+                            marginLeft: "0.5rem",
+                        }}
+                        to={LOGIN_ROUTE}
+                    >
+                        Log in
+                    </Link>
+                </span>
+            </div>
         </form>
     );
-};
+});
 
 export default Signup;
