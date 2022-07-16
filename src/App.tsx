@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import NavBar from "./components/NavBar";
 import Shop from "./pages/Shop";
+import "./App.css";
 
 const App = observer(() => {
     return (

@@ -1,0 +1,24 @@
+.navbar {
+    color: white;
+    width: 100%;
+    background: var(--color-navbar);
+}
+
+.navbar__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar__links-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0.2rem 1rem;
+}
+
+.navbar__links-container .button:hover {
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.19);
+}
