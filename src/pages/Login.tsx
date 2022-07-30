@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { login } from "../api/User";
 import { StoreContext } from "../store/StoreProvider";
-import "./Form.css";
+import "../styles/Form.css";
 
 type Props = {};
 

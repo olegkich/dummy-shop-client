@@ -1,0 +1,33 @@
+.deviceInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.deviceInfo__header {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.deviceInfo__header-image {
+    height: auto;
+    width: 10rem;
+    margin: 2rem 1rem;
+}
+
+.deviceInfo__info {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 70vh;
+
+    box-shadow: 0.3px 0.3px 0.3px 1px rgba(0, 0, 0, 0.349);
+    overflow-y: scroll;
+}
+
+.deviceInfo__info-item {
+    margin: 0.3rem;
+}

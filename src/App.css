@@ -3,10 +3,14 @@
     padding: 0;
     margin: 0;
     font-family: var(--font-family);
-    font-size: x-large;
+    font-size: large;
 }
 
 body {
+    min-height: 100vh;
+}
+
+#root {
     min-height: 100vh;
 }
 
@@ -21,8 +25,61 @@ ul {
 
 input {
     outline: none;
+    padding: 0.3rem;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+input:focus {
+    border: 2px solid rgb(30, 141, 231);
+    box-shadow: 2px rgb(25, 182, 255);
+    transition: 0.3s;
+}
+
+select {
+    padding: 0.3rem;
+}
+
+button {
+    background: none;
+    color: rgb(0, 170, 40);
+    border: 2px solid rgb(0, 170, 40);
+    border-radius: 5px;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 50px rgb(0, 170, 40);
+    background: rgb(0, 188, 44);
+    color: white;
+    transition: 0.3s;
+}
+
+input[type="submit"] {
+    background: none;
+    color: rgb(0, 170, 40);
+    border: 2px solid rgb(0, 170, 40);
+    border-radius: 5px;
+    padding: 0.3rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 1px rgb(2, 209, 51);
+}
+
+input[type="submit"]:hover {
+    box-shadow: 50px rgb(0, 170, 40);
+    background: rgb(0, 170, 40);
+    color: white;
+    transition: 0.3s;
 }
 
 .error {
     font-weight: 700;
+}
+
+.container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

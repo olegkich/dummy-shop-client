@@ -1,0 +1,9 @@
+.deviceCreator {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+}
+
+.deviceCreator__item {
+    margin: 0.5rem;
+}

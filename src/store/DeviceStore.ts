@@ -5,8 +5,8 @@ export default class DeviceStore {
     _types: Array<Type>;
     _brands: Array<Brand>;
     _devices: Array<Device>;
-    _selectedType: Type;
-    _selectedBrand: Brand;
+    _selectedType: number | null;
+    _selectedBrand: number | null;
     _page: number;
     _totalCount: number;
     _limit: number;
@@ -15,8 +15,8 @@ export default class DeviceStore {
         this._types = [];
         this._brands = [];
         this._devices = [];
-        this._selectedBrand = {};
-        this._selectedType = {};
+        this._selectedBrand = null;
+        this._selectedType = null;
         this._totalCount = 0;
         this._page = 1;
         this._limit = 9;
@@ -31,12 +31,16 @@ export default class DeviceStore {
         this._brands = brands;
     }
 
-    setSelectedType(selectedType: Type) {
+    setSelectedType(selectedType: number) {
         this._selectedType = selectedType;
     }
 
-    setSelectedBrand(selectedBrand: Brand) {
+    setSelectedBrand(selectedBrand: number) {
         this._selectedBrand = selectedBrand;
+    }
+
+    setDevices(devices: Array<Device>) {
+        this._devices = devices;
     }
 
     setPage(page: number) {
@@ -47,6 +51,9 @@ export default class DeviceStore {
         this._totalCount = totalCount;
     }
 
+    get devices() {
+        return this._devices;
+    }
     get types() {
         return this._types;
     }

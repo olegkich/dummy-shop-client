@@ -1,0 +1,8 @@
+.brandCreator {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandCreator__item {
+    margin: 0.5rem;
+}

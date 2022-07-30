@@ -3,7 +3,7 @@ import axios, { Axios } from "axios";
 import React, { useContext, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { signup } from "../api/User";
-import "./Form.css";
+import "../styles/Form.css";
 import { Link, useNavigate } from "react-router-dom";
 import { LOGIN_ROUTE } from "../const";
 import { observer } from "mobx-react";
@@ -72,8 +72,11 @@ const Signup = observer((props: Props) => {
                     name="password"
                     id="password"
                 />
+                {errors.password && (
+                    <span className="error">Invalid Password</span>
+                )}
             </div>
-            {errors.password && <span className="error">Invalid Password</span>}
+
             <div className="form__field-container">
                 <label htmlFor="repeatPassword">Repeat Password</label>
                 <input

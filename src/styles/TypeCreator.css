@@ -1,0 +1,10 @@
+.typeCreator {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.typeCreator__item {
+    margin: 0.5rem;
+}

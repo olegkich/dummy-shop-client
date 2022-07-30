@@ -1,0 +1,27 @@
+.type__container {
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+    max-height: 650px;
+    padding: 5px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px;
+}
+
+.type__container-item {
+    box-shadow: 0.5px 0.5px;
+
+    margin: 0.3rem 0;
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.type__container-item:hover {
+    background: rgba(0, 0, 0, 0.038);
+}
+
+.type__container-item_selected {
+    background: rgba(0, 0, 0, 0.312);
+}

@@ -1,5 +1,5 @@
 :root {
     --font-family: "Open Sans", sans-serif;
-    --color-navbar: rgb(52, 52, 58);
-    --color-navbar-darker: rgb(100, 100, 100);
+    --color-primary: rgb(52, 52, 58);
+    --color-secondary: rgb(100, 100, 100);
 }

@@ -1,0 +1,24 @@
+.brand__container {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px;
+
+    height: fit-content;
+    overflow-x: auto;
+    width: 60vw;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.brand__container-item {
+    box-shadow: 0.5px 0.5px;
+
+    margin: 0.2rem 0.2rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.brand__container-item:hover {
+    background: rgba(0, 0, 0, 0.038);
+}
