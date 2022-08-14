@@ -13,5 +13,14 @@ export interface Device {
     img: string;
     typeId: number;
     brandId: number;
+    info?: Info[];
+    price: number;
+    brand: Brand;
+    type: Type;
 }
 export interface User {}
+
+export interface Info {
+    title: string;
+    description: string;
+}

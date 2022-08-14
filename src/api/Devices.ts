@@ -10,6 +10,12 @@ export const getDevices = async (
         typeId,
         limit,
     });
-    console.log(response, "res");
+
+    return response.data;
+};
+
+export const getDeviceById = async (id: number) => {
+    const response = await $host.get(`devices/${id}`);
+
     return response.data;
 };

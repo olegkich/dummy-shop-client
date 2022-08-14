@@ -2,14 +2,15 @@ import { observer } from "mobx-react-lite";
 import React, { useContext } from "react";
 import { StoreContext } from "../store/StoreProvider";
 import "../styles/BrandBar.css";
+import { Brand } from "../types";
 
 type Props = {};
 
 const BrandBar = observer((props: Props) => {
     const { DeviceStore } = useContext(StoreContext);
 
-    const handleBrandSelect = (id: number) => {
-        DeviceStore.setSelectedBrand(id);
+    const handleBrandSelect = (brand: Brand) => {
+        DeviceStore.setSelectedBrand(brand);
     };
     return (
         <div className="brand__container">
@@ -17,7 +18,7 @@ const BrandBar = observer((props: Props) => {
                 return (
                     <span
                         className="brand__container-item"
-                        onClick={() => handleBrandSelect(brand.id)}
+                        onClick={() => handleBrandSelect(brand)}
                     >
                         {brand.name}
                     </span>

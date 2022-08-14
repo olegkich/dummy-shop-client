@@ -17,8 +17,8 @@ const Shop = observer((props: Props) => {
     useEffect(() => {
         (async function () {
             const devices: Array<Device> = await getDevices(
-                DeviceStore.selectedType,
-                DeviceStore.selectedBrand,
+                DeviceStore.selectedType.id,
+                DeviceStore.selectedBrand.id,
                 9
             );
 

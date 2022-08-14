@@ -24,8 +24,6 @@ const devices = observer((props: Props) => {
                     onClick={handleDeviceClick}
                     key={device.id}
                     name={device.name}
-                    brand={device.brand}
-                    type={device.type}
                     id={device.id}
                     price={device.price}
                     rating={device.rating}
