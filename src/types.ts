@@ -23,4 +23,5 @@ export interface User {}
 export interface Info {
     title: string;
     description: string;
+    id?: string;
 }

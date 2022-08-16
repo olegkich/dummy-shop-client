@@ -40,9 +40,11 @@ const DeviceInfo = (props: Props) => {
                         className="deviceInfo__header-image"
                     />
                     <span>Price: {device?.price}$</span>
-                    <button onClick={handleBasket}>
-                        add to item to your basket
-                    </button>
+                    {localStorage.getItem("token") ? (
+                        <button onClick={handleBasket}>
+                            add to item to your basket
+                        </button>
+                    ) : null}
                     {isAddedToBasket ? (
                         <strong>Added this device to your basket</strong>
                     ) : null}
