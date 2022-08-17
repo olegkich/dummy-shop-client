@@ -11,7 +11,7 @@ export const getDevices = async (
         limit,
     });
 
-    return response.data;
+    return response.data.rows;
 };
 
 export const getDeviceById = async (id: number) => {

@@ -22,3 +22,15 @@
     transition: 0.3s;
     background: rgba(255, 255, 255, 0.19);
 }
+
+.navbar__button {
+    background: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    margin: 0 1rem;
+}
+
+.navbar__button:hover {
+    background: rgba(255, 255, 255, 0.45);
+}

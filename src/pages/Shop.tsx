@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import React, { useContext, useEffect } from "react";
 import BrandBar from "../components/BrandBar";
-import Button from "../components/shared/Button";
+
 import TypeBar from "../components/TypeBar";
 import { StoreContext } from "../store/StoreProvider";
 import Devices from "../components/Devices";

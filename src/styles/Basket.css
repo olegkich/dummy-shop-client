@@ -1,0 +1,25 @@
+.basket {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket__container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.basket__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}

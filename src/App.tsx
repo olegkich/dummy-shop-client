@@ -12,7 +12,11 @@ import { Brand, Type } from "./types";
 import { toJS } from "mobx";
 
 const App = observer(() => {
-    const { DeviceStore } = useContext(StoreContext);
+    const { DeviceStore, UserStore } = useContext(StoreContext);
+
+    if (localStorage.getItem("token")) {
+        UserStore.setIsAuth(true);
+    }
 
     useEffect(() => {
         (async function () {

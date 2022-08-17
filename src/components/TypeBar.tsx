@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../store/StoreProvider";
-import Button from "./shared/Button";
+
 import "../styles/TypeBar.css";
 import { observer } from "mobx-react-lite";
 import { Type } from "../types";

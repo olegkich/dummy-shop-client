@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../store/StoreProvider";
 import "../styles/NavBar.css";
-import Button from "./shared/Button";
 
 type Props = {};
 
@@ -16,12 +15,23 @@ const NavBar = observer((props: Props) => {
                 <li>DummyShop LTD</li>
                 <div className="navbar__links-container">
                     {_isAuth ? (
-                        <Link to="/admin">
-                            <Button text="Admin Panel" />
-                        </Link>
+                        <>
+                            <Link to="/admin">
+                                <button className="navbar__button">
+                                    Admin Panel
+                                </button>
+                            </Link>
+                            <Link to="/basket">
+                                <button className="navbar__button">
+                                    Basket
+                                </button>
+                            </Link>
+                        </>
                     ) : (
                         <Link to="/signup">
-                            <Button text="Authorize" />
+                            <button className="navbar__button">
+                                Authorize
+                            </button>
                         </Link>
                     )}
                 </div>
