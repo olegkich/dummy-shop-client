@@ -33,7 +33,8 @@ const DeviceInfo = (props: Props) => {
             <div className="deviceInfo">
                 <div className="deviceInfo__header">
                     <h2>
-                        {device?.brand.name} {device?.type.name} {device?.name}
+                        {device?.brand?.name} {device?.type?.name}{" "}
+                        {device?.name}
                     </h2>
                     <img
                         src={`${REACT_APP_API_URL}${device?.img}`}

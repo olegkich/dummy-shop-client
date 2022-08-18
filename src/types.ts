@@ -10,13 +10,13 @@ export interface Brand {
 
 export interface Device {
     name: string;
-    img: string;
+    img: string | File;
     typeId: number;
     brandId: number;
     info?: Info[];
     price: number;
-    brand: Brand;
-    type: Type;
+    brand?: Brand;
+    type?: Type;
 }
 export interface User {}
 
